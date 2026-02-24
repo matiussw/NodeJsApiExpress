@@ -12,4 +12,4 @@ git commit -m "Message"
 git push (A la primera sale error )
 
 
-git push --set-upstream origin main
+git push --set-upstream origin main (Este es para la primera para subir cambios)
