@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-
 // Datos de ejemplo
 const usuarios = [
     { id: 1, nombre: 'Mateo', rol: 'Cloud' },
@@ -21,7 +20,6 @@ router.get('/usuarios/:id', (req, res) => {
     } else {
         res.json({ success: true, data: usuario });
     }
-
 });
 
 module.exports = router;

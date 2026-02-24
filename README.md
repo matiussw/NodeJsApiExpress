@@ -1,24 +1,22 @@
-# Express API
+# NodeJsApiExpress (Educativo)
 
-Proyecto básico usando Node.js y Express.
+API básica desarrollada con **Node.js y Express** con fines educativos.  
+Permite practicar la creación de rutas, manejo de parámetros y respuestas JSON.  
+Los datos se almacenan **en memoria**, no usa base de datos.
 
-## Instalación
-npm install
+## Estructura del proyecto
+- `index.js` → punto de entrada, configura Express y registra las rutas.
+- `usuarios/UsuariosRoutes.js` → endpoints relacionados con usuarios.
+- `productos/ProductosRoutes.js` → endpoints relacionados con productos.
 
-## Ejecutar
-npm start
-
-## Desarrollo (auto-reload)
-npm run dev
-Servidor disponible en http://localhost:3000
-
+## Requisitos
+- Node.js instalado (v16 o superior recomendado)
 
 ## Comando para subir a GitHub
 
-
 git init 
 
-git remote add origin https://github.com/matiussw/NodeJsApiExpress.git
+git remote add origin <LINK REPO CREADO>
 
 git add .
 
@@ -26,5 +24,9 @@ git commit -m "Message"
 
 git push (A la primera sale error )
 
-
 git push --set-upstream origin main (Este es para la primera para subir cambios)
+
+## Instalación
+```bash
+npm install
+
