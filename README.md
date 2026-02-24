@@ -1,4 +1,19 @@
-Comando para subir a GitHub
+# Express API
+
+Proyecto básico usando Node.js y Express.
+
+## Instalación
+npm install
+
+## Ejecutar
+npm start
+
+## Desarrollo (auto-reload)
+npm run dev
+Servidor disponible en http://localhost:3000
+
+
+## Comando para subir a GitHub
 
 
 git init 
