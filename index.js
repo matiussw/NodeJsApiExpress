@@ -23,7 +23,7 @@ app.use((req, res, next) => {
                     'Error la password no es correcta'
             });
     }
-    next();
+    next(); 
 
 });
 app.use('/api', UsuariosRoutes);
