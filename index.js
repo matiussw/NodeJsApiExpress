@@ -1,10 +1,31 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3030;
 
 const UsuariosRoutes = require('./usuarios/UsuariosRoutes');
 const ProductosRoutes = require('./productos/ProductosRoutes.js');
 app.use(express.json());
+
+
+app.use((req, res, next) => {
+    const apiKey = req.headers['password'];
+    if (!apiKey) {
+        res.status(401).json(
+            {
+                success: false, message:
+                    'API key es requerida'
+            });
+    }
+    if (apiKey !== 'Hola Mundo') {
+        res.status(403).json(
+            {
+                success: false, message:
+                    'Error la password no es correcta'
+            });
+    }
+    next();
+
+});
 app.use('/api', UsuariosRoutes);
 app.use('/api', ProductosRoutes);
 
