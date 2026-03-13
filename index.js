@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
-const port = 3030;
+require('dotenv').config();
+const port = process.env.PORT;
+const PASS =process.env.API_PASSWORD;
 
 const UsuariosRoutes = require('./usuarios/UsuariosRoutes');
 const ProductosRoutes = require('./productos/ProductosRoutes.js');
@@ -16,7 +18,7 @@ app.use((req, res, next) => {
                     'API key es requerida'
             });
     }
-    if (apiKey !== 'Hola Mundo') {
+    if (apiKey !==PASS ) {
         res.status(403).json(
             {
                 success: false, message:
